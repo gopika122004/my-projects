@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+<body>
+    <div class="container">
+        <div class="operation-table">
+            <h2>Addition</h2>
+            <input type="number" id="add-num1" placeholder="Number 1">
+            <input type="number" id="add-num2" placeholder="Number 2">
+            <button onclick="addNumbers()">Add</button>
+            <p id="add-result"></p>
+        </div>
+        <div class="operation-table">
+            <h2>Subtraction</h2>
+            <input type="number" id="sub-num1" placeholder="Number 1">
+            <input type="number" id="sub-num2" placeholder="Number 2">
+            <button onclick="subtractNumbers()">Subtract</button>
+            <p id="sub-result"></p>
+        </div>
+        <div class="operation-table">
+            <h2>Division</h2>
+            <input type="number" id="div-num1" placeholder="Number 1">
+            <input type="number" id="div-num2" placeholder="Number 2">
+            <button onclick="divideNumbers()">Divide</button>
+            <p id="div-result"></p>
+        </div>
+        <div class="operation-table">
+            <h2>Multiplication</h2>
+            <input type="number" id="mul-num1" placeholder="Number 1">
+            <input type="number" id="mul-num2" placeholder="Number 2">
+            <button onclick="multiplyNumbers()">Multiply</button>
+            <p id="mul-result"></p>
+        </div>
+    </div>
+    <button onclick="clearInputs(this)">Clear</button>
+    <script src="c.js"></script>
+</body>
+</html>
