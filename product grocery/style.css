@@ -1,0 +1,59 @@
+/* Center the carousel and adjust size */
+#imageCarousel {
+    margin: 0 auto; /* Centers the slider horizontally */
+    width: 50px; /* Adjust width if necessary */
+    height:20px;
+}
+
+.carousel-inner img {
+    height: 400px; /* Adjust the desired height */
+    object-fit: cover; /* Ensures the image fits without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+    padding:100px;
+}
+
+/* Add some spacing below the slider */
+.carousel {
+    margin-bottom:20px;
+    padding-top: 100%;
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #050202;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 3px;
+}
+body {
+    background-color: aqua; /* Gradient background */
+    font-family: Arial, sans-serif; /* Optional: Improve font styling */
+    margin: 0;
+    padding: 0;
+    background-image: url('w3.jpg'); /* Replace with the path to your image */
+    background-size:initial; /* Ensures the image covers the entire page */
+    background-position: bottom; /* Centers the image */
+} 
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+
+

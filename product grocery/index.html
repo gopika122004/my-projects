@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background color for the entire webpage */
+        body {
+            background-color: #060606;
+        }
+
+        /* Header/navbar styling */
+        .navbar {
+            background-color: #8d618d; /* A new color for the header */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #fff !important; /* Ensures the text is white for better contrast */
+        }
+
+        /* Image carousel adjustments */
+        #imageCarousel {
+            margin: 0 auto;
+        }
+
+        .carousel-inner img {
+            height: 400px; /* Adjust the desired height */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Glowing effect for the About Us section */
+        #about .container {
+            max-width: 800px;
+            background-color: #ffffff;
+            border: 5px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 150px rgba(255, 105, 180, 0.6); /* Glow effect */
+        }
+
+        #about h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Contact form button styling with glow effect */
+        .custom-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 15px rgba(72, 185, 89, 0.5); /* Glow effect */
+        }
+
+        .custom-btn:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 30px rgba(72, 185, 89, 0.8); /* Increased glow on hover */
+        }
+
+        .custom-btn:active {
+            background-color: #388e3c;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Grocery Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="grocer1.jpg" class="d-block w-100" alt="Groceries 1">
+            </div>
+            <div class="carousel-item">
+                <img src="g2.avif" class="d-block w-100" alt="Groceries 2">
+            </div>
+            <div class="carousel-item">
+                <img src="g3.jpg" class="d-block w-100" alt="Groceries 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">About Us</h1>
+            <p class="text-center">
+                Welcome to our grocery store! We provide fresh and organic products directly sourced from farms.
+                Experience the best quality at affordable prices with us.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h1 class="text-center text-white">Contact Us</h1>
+            <form id="contactForm" class="mt-4" onsubmit="handleSubmit(event)">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label text-white">First Name</label>
+                        <input type="text" class="form-control custom-input" id="firstName" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label text-white">Last Name</label>
+                        <input type="text" class="form-control custom-input" id="lastName" placeholder="Enter your last name" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label text-white">Email</label>
+                    <input type="email" class="form-control custom-input" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label text-white">Phone Number</label>
+                    <input type="tel" class="form-control custom-input" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <button type="submit" class="btn custom-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EmailJS and Form Submission Script -->
+    <script>
+        // Initialize EmailJS with your user ID (replace 'YOUR_USER_ID' with your actual EmailJS user ID)
+        emailjs.init('YOUR_USER_ID'); // Replace with your EmailJS User ID
+
+        // Function to handle form submission and send email via EmailJS
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Get form values
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            // EmailJS message payload
+            const emailMessage = {
+                to_email: 'your-email@example.com', // Replace with your email
+                subject: 'New Contact Us Form Submission',
+                message: `Hello, I am ${firstName} ${lastName}. Here are my details:\nEmail: ${email}\nPhone: ${phone}`
+            };
+
+            // Send the email using EmailJS
+            emailjs
+                .send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', emailMessage) // Replace with actual values
+                .then(
+                    (response) => {
+                        console.log('Success:', response);
+                        showSuccessMessage(); // Show success message to the user
+                        document.getElementById('contactForm').reset(); // Reset the form
+                    },
+                    (error) => {
+                        console.error('Error:', error);
+                        alert('Failed to send message. Please try again later.');
+                    }
+                );
+
+            // Send WhatsApp message (optional)
+            const phoneNumber = '1234567890'; // Replace with your WhatsApp number (include country code)
+            const message = `Hello, I am ${firstName} ${lastName}. Here are my details:\nEmail: ${email}\nPhone: ${phone}`;
+            sendWhatsAppMessage(phoneNumber, message);
+        }
+
+        // Function to show success message
+        function showSuccessMessage() {
+            // Create a success message element
+            const successMessage = document.createElement('div');
+            successMessage.textContent = 'Your message has been sent successfully!';
+    
